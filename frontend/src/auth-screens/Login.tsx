@@ -21,10 +21,7 @@ import { authApi } from "@/api/auth";
 
 // zod schema
 const formSchema = z.object({
-  username: z
-    .string()
-    .min(1, { message: "Fill in username." })
-    .max(50, { message: "Must not exceed beyond 50 characters." }),
+  username: z.string().min(1, { message: "Fill in username." }).max(50, { message: "Must not exceed beyond 50 characters." }),
   password: z.string().min(1, { message: "Password is required." }),
 });
 
@@ -110,7 +107,7 @@ function LoginForm() {
         <div>
           <p className="text-sm  leading-none text-center">
             New to Affitnity?{" "}
-            <Link to="/register" className=" font-medium hover:underline">
+            <Link to="/registerTwo" className=" font-medium hover:underline">
               Register here.
             </Link>
           </p>
